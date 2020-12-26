@@ -14,7 +14,7 @@ RUN apt-get update \
     && /bin/bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
 
-RUN apt-key adv --keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
     && apt-add-repository https://cli.github.com/packages \
     && apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
