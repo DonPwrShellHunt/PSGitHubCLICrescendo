@@ -12,9 +12,12 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-vscode.powershell",
+		"ms-azuretools.vscode-docker",
 		"github.vscode-pull-request-github",
 		"eamodio.gitlens"
 	],
+	// ensure that Docker socket is mapped into the development container
+	"runArgs": [ "-v", "/var/run/docker.sock:/var/run/docker.sock"],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
