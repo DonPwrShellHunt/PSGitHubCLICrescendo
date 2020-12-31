@@ -1,4 +1,9 @@
-FROM mcr.microsoft.com/powershell:lts-debian-10
+FROM mcr.microsoft.com/powershell:7.1.0-debian-10-20201215
+# find image with 7.1.0 on debian 10
+#    "7.1.0-debian-10"
+#    "7.1.0-debian-10-20201106"
+#    "7.1.0-debian-10-20201116"
+#    "7.1.0-debian-10-20201215"
 
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
